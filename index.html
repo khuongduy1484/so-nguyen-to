@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function ktsonguyento(a) {
+        let c = true;
+        if (a < 2) {
+            c = false;
+        }
+        if (a == 2) {
+            c = true;
+        }
+        if (a % 2 == 0) {
+            c = false;
+        } else {
+            for (let i = 3; i < a - 1; i++) {
+                if (a % i == 0) {
+                    c = false;
+                    break;
+                }
+            }
+
+        }
+        return c;
+    }
+    // nhap gia tri vao
+    let count =0;
+    let string = '2 '
+    for (let a=0;count<=20;a++) {
+        let b = ktsonguyento(a);
+
+
+        if (b == true) {
+            count++;
+            string += a + ' ';
+        }
+    }
+    document.write(string);
+</script>
+</body>
+</html>
